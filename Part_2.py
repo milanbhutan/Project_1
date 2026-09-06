@@ -1,18 +1,18 @@
 import numpy as np
 import matplotlib as plt
+import pandas as pd
 import my_stats_lib as my_stats
 
-x = [1 ,2, 2, 4]
-y = [3, 4, 5, 1]
+df_temp_prcp = pd.read_csv("Datasets/SLO_annual_temp_and_precip.csv")
+annual_max_temp = df_temp_prcp.loc[:, "TMAX"]
+annual_prcp = df_temp_prcp.loc[:, "PRCP"]
 
-py_avg = np.average(x)
-my_avg = my_stats.avg(x)
 
-py_covar = np.cov(x, y)
-my_covar = my_stats.covar(x, y)
+avg_max_temp = my_stats.avg(annual_max_temp)
+avg_prcp = my_stats.avg(annual_prcp)
+# my_covar = my_stats.covar(x, y)
 
-print(py_avg)
-print(my_avg)
+print(avg_max_temp)
+print(avg_prcp)
 
-print(py_covar)
-print(my_covar)
+#print(my_covar)
