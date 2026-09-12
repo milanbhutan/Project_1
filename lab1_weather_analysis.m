@@ -44,7 +44,7 @@ ylabel("Count","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
 ax = gca; ax.FontSize = 14; ax.FontWeight = "bold"; ax.LineWidth = 1.5;
 
 figure(5)
-plot(Dates_TMAX, TMAX,"LineStyle","-","LineWidth",3,"Color","b","Marker","o","MarkerSize",5);
+plot(Dates_TMAX, TMAX,"LineStyle","-","LineWidth",3,"Color","cyan","Marker","o","MarkerSize",5);
 title("Max Temperature vs Time","FontName","TimesNewRoman","FontSize",15,"FontWeight","bold");
 xlabel("Year","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
 ylabel("Max Temperature [{\circ}F]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
@@ -137,7 +137,7 @@ FB_X_PRCP_TMIN = X_PRCP_TMIN;
 figure(9)
 scatter(SLO_X_PRCP_TAVG(:,1),SLO_X_PRCP_TAVG(:,2), 25, "r", "o", "filled")
 hold on
-scatter(FB_X_PRCP_TAVG(:,1),FB_X_PRCP_TAVG(:,2), 25, "b", "o", "filled")
+scatter(FB_X_PRCP_TAVG(:,1),FB_X_PRCP_TAVG(:,2), 25, "cyan", "o", "filled")
 title("San Luis Obispo vs Fairbanks Weather","FontName","TimesNewRoman","FontSize",15,"FontWeight","bold");
 xlabel("Precipitation [inches]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
 ylabel("Avg. Temperature [{\circ}F]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
@@ -148,7 +148,7 @@ ax = gca; ax.FontSize = 14; ax.FontWeight = "bold"; ax.LineWidth = 1.5;
 figure(10)
 scatter(SLO_X_PRCP_TMAX(:,1),SLO_X_PRCP_TMAX(:,2), 25, "r", "o", "filled")
 hold on
-scatter(FB_X_PRCP_TMAX(:,1),FB_X_PRCP_TMAX(:,2), 25, "b", "o", "filled")
+scatter(FB_X_PRCP_TMAX(:,1),FB_X_PRCP_TMAX(:,2), 25, "cyan", "o", "filled")
 title("San Luis Obispo vs Fairbanks Weather","FontName","TimesNewRoman","FontSize",15,"FontWeight","bold");
 xlabel("Precipitation [inches]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
 ylabel("Max Temperature [{\circ}F]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
@@ -159,7 +159,7 @@ ax = gca; ax.FontSize = 14; ax.FontWeight = "bold"; ax.LineWidth = 1.5;
 figure(11)
 scatter(SLO_X_PRCP_TMIN(:,1),SLO_X_PRCP_TMIN(:,2), 25, "r", "o", "filled")
 hold on
-scatter(FB_X_PRCP_TMIN(:,1),FB_X_PRCP_TMIN(:,2), 25, "b", "o", "filled")
+scatter(FB_X_PRCP_TMIN(:,1),FB_X_PRCP_TMIN(:,2), 25, "cyan", "o", "filled")
 title("San Luis Obispo vs Fairbanks Weather","FontName","TimesNewRoman","FontSize",15,"FontWeight","bold");
 xlabel("Precipitation [inches]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
 ylabel("Min Temperature [{\circ}F]","FontName","TimesNewRoman","FontSize",14,"FontWeight","bold");
