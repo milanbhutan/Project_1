@@ -21,14 +21,38 @@ var_prcp = stats.var(annual_prcp)
 temp_prcp_covar = stats.covar(annual_max_temp, annual_prcp)
 
 
-fig, axes = plt.subplots(2, 3)
+fig, axes = plt.subplots(2, 2)
+fig.suptitle("Precipitation and Max Temperature \n for past 100 years in SLO")
 
-axes[0, 0].plot(df_temp_prcp_fixed[["TMAX"]])
+temp_bins = np.arange(68, 80, 1)
+prcp_bins = np.arange(5, 55, 5)
+
+axes[0, 0].plot(df_temp_prcp_fixed[["TMAX"]], marker = ".")
+axes[0, 0].set_xlabel("Year")
+axes[0, 0].set_ylabel("Max Temperature ($^\circ$F)")
+
+axes[0, 1].hist(df_temp_prcp_fixed["TMAX"], bins = temp_bins, edgecolor = "black")
+axes[0, 1].set_xticks(temp_bins)
+axes[0, 1].set_xlabel("Max Temperature ($^\circ$F)")
+axes[0, 1].set_ylabel("Count")
+
+axes[1, 0].plot(df_temp_prcp_fixed[["PRCP"]], marker = ".")
+axes[1, 0].set_xlabel("Year")
+axes[1, 0].set_ylabel("Precipitation (Inches)")
+
+axes[1, 1].hist(df_temp_prcp_fixed["PRCP"], bins = prcp_bins, edgecolor = "black")
+#axes[1, 1].set_xticks(bins)
+axes[1, 1].set_xlabel("Precipitation (Inches)")
+axes[1, 1].set_ylabel("Count")
 
 print(f"Max Temperature Average: {avg_max_temp}")
 print(f"Precipitation Average: {avg_prcp}")
 print(f"Max Temperature Variance: {var_max_temp}")
 print(f"Precipitation Variance: {var_prcp}")
 print(f"Temperature and Precipitation Covariance: \n{temp_prcp_covar}")
+
+
+
+
 
 plt.show()
