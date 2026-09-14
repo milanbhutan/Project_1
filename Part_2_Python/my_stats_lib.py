@@ -4,13 +4,13 @@ def avg(
     x: np.ndarray
 ):
     return (np.sum(x) / np.size(x) )
+
 def var(
     x: np.ndarray
 ) -> float:
     mu_x = avg(x)
     variance = np.sum((x - mu_x) ** 2) / np.size(x)
     return variance
-
 
 def covar(
     x: np.ndarray,
